@@ -1,0 +1,43 @@
+.header-container{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-container{
+    margin-right: 50vw;
+}
+
+.logo-1{
+    height: 60px;
+    width: 60px;
+}
+
+.nav-items{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+    font-weight: 500;
+}
+
+.logo-2, .logo-3{
+    height: 70px;
+    width: 100px;
+}
+
+.nav-items> img:hover{
+    /* margin: 10px 40px; */
+    scale: 1.1;
+    text-shadow: 1px 1px 2px white;
+}
+
+.nav-items>span:hover {
+    scale: 1.2;
+    text-shadow: 1px 1px 2px white;
+} 
+
+.home{
+    background-color: #10044A;
+    height: 100vh;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Tendulkar
+    </title>
+    <link rel="stylesheet" href="./Header.css">
+    <link rel="stylesheet" href="./Home.css">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="home">
+    <div class="header-container">
+        <div class="logo-container">
+          <img
+            class="logo-1"
+            src="https://sachintendulkar.com/wp-content/themes/srt-dataduck/assets/svg/srt-white-logo.svg"
+            alt="Logo"
+          ></img>
+        </div>
+        <div class="nav-items">
+          <span>Home</span>
+          <span>Life</span>
+          <img class="logo-2" src="https://sachintendulkar.com/wp-content/uploads/2021/12/srt-foundation.svg" alt="nav-img"></img>
+          <img class="logo-3" src="https://sachintendulkar.com/wp-content/uploads/2021/12/srt-management.svg" alt="nav-img"></img>
+          <span>Team</span>
+          <span>News</span>
+          <span>Contact</span>
+          </div>
+      </div>
+      <!-- <div class="home"> -->
+        <div class="slider">
+          <template class="boxTemplate">
+          <img class="slider-img" src="/sachin-2/1.jpeg"  />
+        </template> 
+        </div>
+        <div class="slogan">
+          <h3>TOWARDS A DREAM</h3>
+          <h1>SACHIN 
+            <br>
+            TENDULKAR</h1>
+        </div>
+      <!-- </div> -->
+      <div class="home-2">
+      
+  
+      </div>
+    </div>
+</body>
+<script>
+   var image= document.querySelector(".slider-img");
+   var container= document.querySelector(".slider");
+   var template= document.querySelector(".boxTemplate");
+   console.log(container);
+   
+   const images = [
+    "./1.jpeg",
+    "./2.jpeg",
+    "./3.jpeg",
+    "./4.jpeg",
+    "./5.jpeg",
+    "./6.jpeg",
+    "./7.jpeg",
+    "./8.jpeg",
+    "./9.jpeg",
+    "./10.jpeg"
+   ]
+
+  let currentIndex= 0;
+
+function appendNextImage(x, y) {
+  if (currentIndex >= images.length) {
+    // If we've shown all images, start from the beginning
+    currentIndex = 0;
+  }
+  console.log("The value of x and y is: ",x,y);
+  const imageUrl = images[currentIndex];
+  const newBox = document.importNode(template.content, true);
+  newBox.querySelector(".slider-img").src = imageUrl; //Giving the image 'src' attribute to the the img element.
+  newBox.querySelector(".slider-img").style.left = `${x}px`;
+  newBox.querySelector(".slider-img").style.top = `${y}px`;
+  container.appendChild(newBox);
+
+  // Increment the index for the next image
+  currentIndex++; 
+}
+
+container.addEventListener("mousemove", (function(e){
+  const x=e.clientX;
+  const y=e.clientY;
+  appendNextImage(x, y);
+}) );
+
+</script>
+</html>

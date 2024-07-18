@@ -1,0 +1,13 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    background-color: #10044A;
+}
+.slider{
+    height: 40vh;
+}
+
+.slider-img{
+    position: absolute;
+}
